@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS inter</title>
+  </head>
+  <body>
+    JS intermediate
+    <script>
+
+        function stars_string(num) {
+          var array =[];
+          for (var i = 0; i <= num; i++){
+            array += '*';
+        }
+          return array;
+        }
+        console.log(stars_string(8));
+
+        function draw_string(array) {
+          var a = '';
+          for (var i = 0; i < array.length; i++){
+            console.log(stars_string(array[i]));
+          }
+        }
+        draw_string([2, 3, 4, 10, 20]);
+
+        function draw_stars(array) {
+          for (var i = 0; i < array.length; i++) {
+            if (typeof array[i] === 'number') {
+              console.log('*'.repeat(array[i]));
+            }
+            else if (typeof array[i] === 'string') {
+              length = array[i].length;
+              letter = array[i][0].toLowerCase().repeat(length);
+              console.log(letter);
+            }
+          }
+        }
+        draw_stars([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]);
+
+
+    </script>
+  </body>
+</html>

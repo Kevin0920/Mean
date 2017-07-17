@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS basic 2 </title>
+  </head>
+  <body>
+    Yey !!!
+    <script>
+    // function magic_multiply(x, y){
+    //   return x * y;
+    // }
+    // let test1 = magic_multiply(5, 2);
+    // console.log(test1);
+    //
+    // function magic_multiply(x, y){
+    //   return x * y;
+    // }
+    // let test2 = magic_multiply(0, 0);
+    // console.log(test2);
+    //
+    // function magic_multiply(x, y) {
+    //   return x * y;
+    // }
+    // let test3 = magic_multiply([1, 2, 3], 2);
+    // console.log(test3);
+    //
+    // function magic_multiply(x, y){
+    //   return x * y;
+    // }
+    // let test4 = magic_multiply(7, "three");
+    // console.log(test4);
+    //
+    // function magic_multiply(arr, num){
+    //   for (var i = 0; i < arr.length; i++) {
+    //     arr[i] *= num;
+    //   }
+    //   return arr;
+    // }
+    // let test3 = magic_multiply([1, 2, 3], 2);
+    // console.log(test3);
+
+    function magic_multiply(x, y) {
+      if(typeof x === 'string'){
+        let a = '';
+        for (let i = 0; i < y; i++) {
+          a += x;
+        }
+        return a;
+      }
+    }
+
+    let test5 = magic_multiply("Brendo", 4);
+    console.log(test5);
+
+
+
+    </script>
+  </body>
+</html>

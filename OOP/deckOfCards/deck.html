@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // how we can shuffle a deck of cards
+    // use standard deck of 52 cards
+    // start with storing for images into an array - images
+    // wiil need to supply your own images
+    class Deck {
+        constructor(){
+            this.ranks = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
+            this.values = ["2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"];
+            this.deck=[];
+            this.creatDeck();
+
+        }
+
+        createDeck() {
+            for (let i = 0; i < this.values.length; i++) {
+                for(let j = 0; j < this.ranks.length; j++){
+                    let card = {rank: this.ranks[i], value: this.values[j]};
+                    this.deck.push(card);
+                }
+            }
+        }
+        shuffle(){
+            console.log('')
+        }
+
+        reset(){
+            this.deck= [];
+            this.createDeck();
+        }
+        deal(){
+            Math.floor(Math.random(1,this.deck.length + 1));
+            this.deck.splice(randomIndex, 1);
+        }
+    }
+
+    class Player{
+        constructor(name){
+            this.name = name;
+            this.hand = hand;
+        }
+        takeCard(deck){
+            // return 1 card of deck deal
+            this.hand.push(deck.deal());
+        }
+        discardCard(rank, value){
+
+        }
+    }
+    let firstDeck = new Deck();
+    console.log(firstDeck.deck)
+    let firstPlay = new Player('kevin');
+    console.log(firstPlayer.name);
+
+
+
+
+</script>
+</body>
+</html>

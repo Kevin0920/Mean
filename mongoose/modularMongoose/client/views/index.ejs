@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="border-bottom: 3px solid black">All Animals</h2>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (a in animals) { %>
+        <tr>
+            <ul>
+                <ol><td><a href="/<%=animals[a].id %>"><%=animals[a].name %></td></ol>
+                <td><%=animals[a].description %></td>
+                <td><form class="" action="<%= animals[a].id%>/delete" method="post">
+                    <input type="submit" name="" value="Delete" >
+                </form></td>
+            </ul>
+        </tr>
+        <%} %>
+
+        </tbody>
+    </table>
+    <form class="" action="/mongoose/new" method="get">
+        <input type="submit" name="" value="Add an Animal">
+    </form>
+</div>
+
+</body>
+</html>

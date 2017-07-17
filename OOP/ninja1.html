@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    function Ninja(name) {
+        this.name = name;
+        this.health = 100;
+        var speed = 3, strength = 3;
+        this.sayName = function () {
+            console.log(`Hello my ninja name is ${this.name} !`);
+        }
+        this.showStats = function () {
+            console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${speed}, Strength: ${strength}`);
+        }
+        this.drinkSake = function () {
+            this.health += 10;
+            return this;
+        }
+    }
+
+    var ninja1 = new Ninja("Hyabusa");
+    ninja1.sayName();
+    // -> "My ninja name is Hayabusa!"
+
+    ninja1.showStats();
+    // -> "Name: Hayabusa, Health: 100, Speed: 3, Strength: 3"
+
+    console.log(ninja1.drinkSake());
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

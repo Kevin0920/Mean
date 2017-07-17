@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS</title>
+  </head>
+  <body>
+    hello world
+    <script>
+      var x = [];
+      x.push('coding', 'dojo', 'rock');
+      x.pop();
+      console.log(x);
+
+      var y = [];
+      console.log(y.push(88));
+
+      var z = [9, 10, 6, 5, -1, 20, 13, 2];
+        z.pop();
+        console.log(z);
+
+      var names = ['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso'];
+      for (var i = 0; i < names.length; i++){
+        console.log(names[i].length);
+      }
+
+
+      var names = ['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso'];
+      for (var i = 0; i < names.length; i++){
+        if (names[i].length === 5){
+          console.log(names[i]);
+        }
+      }
+
+
+      function yell(string){
+        var temp = string.split(' ');
+        var newArr = [];
+        for (var i = 0; i < temp.length; i++) {
+          newArr.push(temp[i].toUpperCase());
+        }
+        return newArr.join(' ');
+      }
+      console.log(yell('hello, kevin ke'));
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

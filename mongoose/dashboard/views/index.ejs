@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animals</title>
+</head>
+<body>
+    <h1>All Animal Information</h1>
+    <a href="/mongooses/new">Create a new animal</a>
+    <% for (var x = 0; x < users.length; x++) {%>
+    <p>Name: <%= users[x].name %></p>
+    <p>Age: <%= users[x].age %></p>
+    <p>Type: <%= users[x].type %></p>
+    <!-- the form to show a single animal -->
+    <form action="/mongooses/<%= users[x]._id %>">
+        <input type="submit" value="show" />
+    </form>
+    <!-- the form to edit a single animal -->
+    <form action="/mongooses/<%= users[x]._id %>/edit">
+        <input type="submit" value="edit" />
+    </form>
+    <!-- the form to delete a single animal from database -->
+    <form action="/mongooses/<%= users[x]._id %>/destroy" method="post">
+        <input type="submit" value="delete this animal">
+    </form>
+    <hr>
+        <% } %>
+    </div>
+</body>
+</html>

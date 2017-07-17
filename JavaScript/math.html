@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Math</title>
+  </head>
+  <body>
+    Math now!
+    <script>
+      // function zero_negativity(array){
+      //   for (var i = 0; i < array.length; i++) {
+      //     if (array[i] < 0) {
+      //       return true;
+      //     }
+      //     else {
+      //       return false;
+      //     }
+      //   }
+      // }
+      // var array = zero_negativity([2, 19, 22, 34, -10, -1]);
+      // console.log(array);
+      //
+      // function is_even(num){
+      //   if(num % 2 === 0){
+      //     return true;
+      //   }
+      //   else {
+      //     return false;
+      //   }
+      // }
+      // console.log(is_even(3));
+
+    //   function how_many_even(list){
+    //     var count = 0;
+    //     for (var i = 0; i < list.length; i++) {
+    //       if (list[i] % 2 === 0) {
+    //         count += 1;
+    //       }
+    //     }
+    //     return count;
+    //   }
+    //
+    //   var list = how_many_even([2, 4 , 6 , 11, 30])
+    //   console.log(list);
+    //
+    //
+    // function create_dummy_array(num){
+    //   var array = [];
+    //   for (var i = 0; i < num; i++) {
+    //     randNum = Math.random() * 9
+    //     array.push(randNum);
+    //   }
+    //   return array;
+    // }
+    // var res = create_dummy_array(10);
+    // console.log(res);
+
+    function random_choice(array){
+      for (var i = Math.floor(Math.random() * array.length); i < array.length; i++) {
+        return array[i];
+      }
+    }
+    var result = random_choice([22, 12, 50, 20]);
+    console.log(result);
+
+    </script>
+  </body>
+</html>

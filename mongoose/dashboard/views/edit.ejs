@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+</head>
+<body>
+    <h2>The animal can be edited!!!</h2>
+    <form action="/mongooses/<%= user._id %>" method="post">
+        <input name="id" type="hidden" value="<%= user._id %>">
+        <p>Name: </p><input type="text" name="name" value="<%= user.name %>">
+        <p>Age: </p><input type="text" name="age" value="<%= user.age %>">
+        <p>Type: </p><input type="text" name="type" value="<%= user.type %>">
+        <input type="submit" value="update!">
+    </form>
+    <hr>
+    <a href="/">Back to the index</a>
+    <hr>
+    <a href="/mongooses/<%= user._id %>">Back to Show</a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function fib() {
+        // Some variables here
+        let fibo = [0, 1], curr = 0, next = 1;
+
+        function nacci() {
+            // do something to those variables here
+            fibo.push(fibo[curr] + fibo[next]);
+            console.log(fibo[next]);
+            curr++;
+            next++;
+        }
+        return nacci
+    }
+    var fibCounter = fib();
+    fibCounter() // should console.log "1"
+    fibCounter() // should console.log "1"
+    fibCounter() // should console.log "2"
+    fibCounter() // should console.log "3"
+    fibCounter() // should console.log "5"
+    fibCounter() // should console.log "8"
+
+</script>
+</body>
+</html>
