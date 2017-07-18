@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<div class="switch" *ngFor="let switch of switchs; let i = index">
+  <!-- i is the index of the switch array -->
+  <p>switch: {{switch}} i : {{i}}</p>
+  <button *ngIf="switch"
+  [ngClass]="{'on' : switch}"
+  (click)="switchOff(i)">On</button>
+  <button *ngIf="!switch"
+  [ngClass]="{'on' : switch}"
+  (click)="switchOff(i)">Off</button>
+</div>
