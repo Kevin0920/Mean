@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<div class="">
+  <button (click)="changeTime(0)" [ngClass]="{'switch': time[0]}">PST</button>
+  <button (click)="changeTime(1)" [ngClass]="{'switch': time[1]}">MST</button>
+  <button (click)="changeTime(2)" [ngClass]="{'switch': time[2]}">CST</button>
+  <button (click)="changeTime(3)" [ngClass]="{'switch': time[3]}">EST</button>
+  <button (click)="clear()">Clear</button>
+<div class="">
+  <h3 *ngIf="time[0]">{{dateTime| date: "medium" : 'PST'}}</h3>
+  <h3 *ngIf="time[1]">{{dateTime| date: "medium" : 'MST'}}</h3>
+  <h3 *ngIf="time[2]">{{dateTime| date: "medium" : 'CST'}}</h3>
+  <h3 *ngIf="time[3]">{{dateTime| date: "medium" : 'EST'}}</h3>
+</div>
+<!-- <h1>{{dateTime | date: "medium"}}</h1> -->
