@@ -1,37 +1,24 @@
+<div class="container">
   <h1>Dojo Mail</h1>
   <table>
+    <thead>
     <tr>
       <th>Email</th>
       <th>Importance</th>
       <th>Subject</th>
       <th>Content</th>
     </tr>
-
-    <tr>
-      <td>{{emails[0].email | lowercase}}</td>
-      <td *ngIf="emails[0].importance">High</td>
-      <td>{{emails[0].subject}}</td>
-      <td>{{emails[0].content}}</td>
-    </tr>
-
-    <tr>
-      <td>{{emails[1].email | lowercase}}</td>
-      <td *ngIf="emails[1].importance">High</td>
-      <td>{{emails[1].subject}}</td>
-      <td>{{emails[1].content}}</td>
-    </tr>
-
-      <tr>
-      <td>{{emails[2].email | lowercase}}</td>
-      <td *ngIf="!emails[2].importance">Low</td>
-      <td>{{emails[2].subject}}</td>
-      <td>{{emails[2].content}}</td>
+    </thead>
+    <thead>
+      <tr *ngFor='let email of emails'>
+        <td>{{ email.email }}</td>
+        <td>
+          <span *ngIf='email.importance'>High</span>
+          <span *ngIf='!email.importance'>False</span>
+        </td>
+        <td>{{ email.subject }}</td>
+        <td>{{ email.content }}</td>
       </tr>
-
-      <tr>
-      <td>{{emails[3].email | lowercase}}</td>
-      <td *ngIf="!emails[3].importance">Low</td>
-      <td>{{emails[3].subject}}</td>
-      <td>{{emails[3].content}}</td>
-      </tr>
+    </thead>
   </table>
+</div>
