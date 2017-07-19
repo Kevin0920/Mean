@@ -1,0 +1,98 @@
+<h1>{{title}}</h1>
+<div class="container">
+  <div class="">
+    <h3>Account Information</h3>
+    <h3>{{ success }}</h3>
+    <form (submit)="onSubmit()">
+          First Name: <input type="text" name="first_name"
+            required
+            minlength="2"
+            maxlength="24"
+            [(ngModel)]="user.first_name"
+            #first_name="ngModel">
+            <div class="red" *ngIf="first_name.errors && (first_name.dirty || first_name.touched)">First name is required</div>
+          <br>
+          <br>
+          Last Name: <input type="text" name="last_name"
+            required
+            minlength="2"
+            maxlength="24"
+            [(ngModel)]="user.last_name"
+            #last_name="ngModel">
+            <div class="red" *ngIf="last_name.errors && (last_name.dirty || last_name.touched)">last name is required</div>
+          <br>
+          <br>
+          Email: <input type="text" name="email"
+            required
+            minlength="4"
+            maxlength="24"
+            [(ngModel)]="user.email"
+            #email="ngModel"
+            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b">
+            <div class="red" *ngIf="email.errors && (email.dirty || email.touched)">Email must be valid</div>
+          <br>
+          <br>
+          Password: <input type="text" name="password"
+            required
+            minlength="8"
+            maxlength="15"
+            [(ngModel)]="user.password"
+            pattern="^([a-zA-Z0-9@*#]{8,15})$"
+            #password="ngModel">
+            <div class="red" *ngIf="password.errors && (password.dirty || password.touched)">Password must be at least 16 charactors long</div>
+          <br>
+          <br>
+          Password Confirmation: <input type="text" name="password_confirm"
+            required
+            minlength="8"
+            maxlength="15"
+            [(ngModel)]="user.password_confirm"
+            pattern="^([a-zA-Z0-9@*#]{8,15})$"
+            #password_confirm="ngModel">
+            <div class="red" *ngIf="user.password != user.password_confirm.errors && (password_confirm.dirty || password_confirm.touched)">Password must be matched</div>
+          <br>
+          <br>
+          Street Address: <input type="text" name="address"
+            required
+            minlength="3"
+            maxlength="30"
+            [(ngModel)]="user.address"
+            #address="ngModel">
+            <div class="red" *ngIf="address.errors && (address.dirty || address.touched)">Address is required</div>
+          <br>
+          <br>
+          Unit/Apt#: <input type="text" name="unit"
+            required
+            minlength="1"
+            maxlength="15"
+            [(ngModel)]="user.unit"
+            #unit="ngModel">
+          <br>
+          <br>
+          City: <input type="text" name="city"
+            required
+            minlength="1"
+            maxlength="15"
+            [(ngModel)]="user.city"
+            #city="ngModel">
+            <div class="red" *ngIf="city.errors && (city.dirty || city.touched)">City is required</div>
+          <br>
+          <br>
+          State: <select class="" name="state"><br>
+            <option value="California">California</option>
+            <option value="New York">New York</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+          </select>
+          <br>
+          <br>
+          <label for="">I'm feeling Lucky:</label>
+            <input type="radio" name="answer" value="yes"> Yes
+            <input type="radio" name="answer" value="no"> No
+          <br>
+          <br>
+      <button type="submit" value="submit">Register</button>
+    </form>
+    {{user | json}}
+  </div>
+</div>
