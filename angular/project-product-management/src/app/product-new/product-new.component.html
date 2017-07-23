@@ -1,0 +1,7 @@
+<h1>Create a New Product</h1>
+<form #formData="ngForm" (submit)="create()">
+  <h2>Title: <input type="text" name="title" [(ngModel)]="product.title" requried minlength="4"></h2>
+  <h2>Price: <input type="text" name="price" [(ngModel)]="product.price" required></h2>
+  <h2>Image Url: <input type="text" name="url" [(ngModel)]="product.url" required></h2>
+  <button type="submit" [disabled]="!formData.valid">Create</button>
+</form>
